@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+	xmlns="http://www.uptimesoftware.com/erdc/erdc"
+	xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+    <class>Generic SNMP</class>
+	<exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+	
+    <elements>
+		<element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+			<control_options> size:40 </control_options>
+			<default_value>scripts/MonitorSNMPGeneric/MonitorSNMPGeneric.sh</default_value>
+			<short_description>Script Name</short_description>
+			<long_description>Name of the script/binary/process to be executed by up.time </long_description>
+			<validation_rule><alphanumeric/></validation_rule>
+			<error_message><alphanumeric>required field</alphanumeric></error_message>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+		<element name="snmpversion" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value>v1</default_value>
+            <short_description>SNMP Version</short_description>
+            <long_description>SNMP Version</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <single_select type="dropdown">
+                    <value>v1</value>
+                    <value>v2</value>
+                    <value>v3</value>
+                </single_select>
+            </gui_type>
+        </element>
+		<element name="snmp-port" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value>161</default_value>
+            <short_description>SNMP Port</short_description>
+            <long_description>SNMP Port</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+		<element name="snmpaction" parameter_type="input" data_type="string" gui_basic="1"
+				range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>SNMP Action</short_description>
+            <long_description>SNMP Action</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <single_select type="dropdown">
+                    <value>Get</value>
+                    <value>Walk</value>
+                </single_select>
+            </gui_type>
+        </element>
+		<element name="data_type" parameter_type="input" data_type="string" gui_basic="1"
+				range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>SNMP Data Type</short_description>
+            <long_description>SNMP Data Type</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <single_select type="dropdown">
+                    <value>Integer</value>
+                    <value>String</value>
+                </single_select>
+            </gui_type>
+        </element>
+		<element name="snmp-oid" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>SNMP OID</short_description>
+            <long_description>SNMP OID</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+				<string/>
+            </gui_type>
+        </element>
+		<element name="snmp-walk-index" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>SNMP Table Index OID (Walk)</short_description>
+            <long_description>SNMP Table Index OID (Walk)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+				<string/>
+            </gui_type>
+        </element>
+		<element name="snmp-walk-index-include" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>SNMP Table Index Filter</short_description>
+            <long_description>SNMP Table Index Filter</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+				<string/>
+            </gui_type>
+        </element>
+        
+        <element name="read-community" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Community String(v1/v2)</short_description>
+            <long_description>Community String(v1/v2)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+				<string/>
+            </gui_type>
+        </element>
+        
+        <element name="agent-username" parameter_type="input" data_type="string" gui_basic="1"
+				range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Agent Username (v3)</short_description>
+            <long_description>Agent Username (v3)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+        <element name="auth-type" parameter_type="input" data_type="string" gui_basic="1"
+				range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Authentication Type (v3)</short_description>
+            <long_description>Authentication Type (v3)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <single_select type="dropdown">
+                    <value>MD5</value>
+                    <value>SHA</value>
+                </single_select>
+            </gui_type>
+        </element>
+        <element name="auth-pass" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Authentication Passphrase (v3)</short_description>
+            <long_description>Authentication Passphrase(v3)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <password/>
+            </gui_type>
+        </element>
+        <element name="privacy-type" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Privacy Type (v3)</short_description>
+            <long_description>Privacy Type (v3)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <single_select type="dropdown">
+                    <value>DES</value>
+                    <value>AES</value>
+                </single_select>
+            </gui_type>
+        </element>
+		<element name="privacy-pass" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Privacy Passphrase (v3)</short_description>
+            <long_description>Privacy Passphrase(v3)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <password/>
+            </gui_type>
+        </element>
+        <element name="returnedDataInt" parameter_type="output" data_type="ranged" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Returned Data (Integer)</short_description>
+            <long_description>Returned Data (Integer)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+				<integer/>
+			</gui_type>
+        </element> 
+		<element name="returnedDataString" parameter_type="output" data_type="string" gui_basic="1" range_type="0" units="">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Returned Data (String)</short_description>
+            <long_description>Returned Data (String)</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+				<string/>
+			</gui_type>
+        </element> 
+
+        
+        <element name="timer" parameter_type="output" data_type="integer" gui_basic="0" range_type="0" units="ms">
+            <control_options>size:8</control_options>
+            <default_value/>
+            <short_description>Response time</short_description>
+            <long_description>Response time in ms</long_description>
+            <validation_rule/>
+            <error_message/>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+    </elements>
+    <help>When running a custom script check, note that the second parameter is always the name of the assigned host.
+	The script that's executed should output each variable on it's own line, otherwise up.time won't be able to capture the appropriate information.
+    </help>
+</uptime>
