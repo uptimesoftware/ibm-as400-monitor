@@ -1,6 +1,0 @@
-name=SNMP Generic
-version=1.0
-platforms=windows linux
-description=Monitor SNMP data by doing snmpget or snmpwalk
-requiresAgentScript=false
-restartCore=false

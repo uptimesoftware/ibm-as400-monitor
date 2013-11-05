@@ -18,10 +18,6 @@
     * IBM AS400 Monitor 2.0 - 6.0
   
 
-  
-    * IBM AS400 Monitor 1.1 - 5.5
-  
-
 
 ### Description: Monitor CPU/Memory performance on an IBM (iSeries) AS/400 server.
 
