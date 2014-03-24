@@ -1,0 +1,20 @@
+{
+	"type":"plugin",
+	"name":"AS400 Basic",
+	"description":"My test",
+	"category":"Monitor CPU/Memory performance on an IBM (iSeries) AS/400 server.",
+	"version":"3.0",
+	"supported_versions":[
+		"7.3"
+	],
+	"supported_platforms":[
+		"windows",
+		"linux"
+	],
+	"upgrade_in_place":true,
+	"requires_agent_scripts":false,
+	"requires_additional_setup":true,
+	"icon_url":"http://localhost:8000/MonitorAS400/java.png",
+	"grid_url_target":"http://www.thedailyshow.com",
+	"git_file_target":"http://pso-plui:9999/test/MonitorAS400.zip"
+}

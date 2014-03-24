@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: plui
+Build-Jdk: 1.7.0_09
+Plugin-Class: com.uptimesoftware.uptime.plugin.MonitorAS400
+Plugin-Version: 3.0
+Plugin-Id: monitor-ibm-as400
+Plugin-Provider: Uptime Software
+

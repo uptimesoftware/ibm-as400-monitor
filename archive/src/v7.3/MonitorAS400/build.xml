@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<project name="MonitorAS400" default="dist" basedir=".">
+    
+  <path id="compile.classpath">
+    <fileset dir="lib">
+      <include name="*.jar" />
+    </fileset>
+    <fileset dir="lib/compile">
+      <include name="*.jar" />
+    </fileset>
+  </path>
+
+
+  <target name="init">
+    <echo message="-------------------- build.xml --------------------" />
+    
+    <mkdir dir="classes" />
+    <mkdir dir="dist" />
+  </target>
+
+  <target name="compile" depends="init">
+    <javac destdir="classes" debug="true" srcdir="src" nowarn="false" optimize="false" deprecation="true"
+      target="1.7" verbose="false" fork="false" source="1.7" includeantruntime="false">
+      <classpath refid="compile.classpath" />
+    </javac>
+  </target>
+
+  <target name="dist" depends="compile"> 
+  	<zip destfile="dist/tmp/MonitorAS400.zip">
+  	  <zipfileset dir="classes" prefix="classes"/>
+      <zipfileset dir="lib" prefix="lib" excludes="compile/**"/>
+      <zipfileset dir="src/META-INF" prefix="classes/META-INF"/>  
+  	</zip>
+  	<zip destfile="dist/MonitorAS400/MonitorAS400.zip">
+      <zipfileset dir="definition" />
+  	  <zipfileset file="dist/tmp/MonitorAS400.zip" prefix="files/plugins/java" />
+    </zip>
+    <copy todir="dist/MonitorAS400">
+      <fileset dir="grid_files" />
+    </copy>
+  	<delete dir="dist/tmp" />
+  </target>
+
+  <target name="clean">
+    <delete dir="dist" />
+    <delete dir="classes" />
+  </target>
+
+</project>
