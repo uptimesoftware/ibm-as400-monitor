@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
-        xmlns="http://www.uptimesoftware.com/erdc/erdc"
-        xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" target_grouping="other">
     <class>AS400 Basic</class>
     <exec>JAVA_PLUGIN:UptimeMonitorAS400</exec>
 	<erdc_version>3.0</erdc_version>
