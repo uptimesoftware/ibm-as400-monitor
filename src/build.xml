@@ -32,7 +32,7 @@
       <zipfileset dir="src/META-INF" prefix="classes/META-INF"/>  
   	</zip>
   	<!--<zip destfile="dist/MonitorAS400/MonitorAS400.zip">-->
-  	<zip destfile="../dist/MonitorAS400.zip">
+  	<zip destfile="../dist/ibm-as400-monitor.zip">
       <zipfileset dir="definition" />
   	  <zipfileset file="dist/tmp/MonitorAS400.zip" prefix="files/plugins/java" />
     </zip>
