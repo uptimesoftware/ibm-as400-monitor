@@ -1,0 +1,8 @@
+name=IBM AS/400 Basic Monitor
+version=2.2
+platforms=windows linux solaris
+description=Allows for AS400 system monitoring
+requiresAgentScript=false
+restartCore=true
+onUpgradeRemoveFiles=true
+onUpgradeRemoveMonitors=false

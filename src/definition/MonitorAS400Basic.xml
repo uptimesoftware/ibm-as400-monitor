@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+        xmlns="http://www.uptimesoftware.com/erdc/erdc"
+        xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+    <class>AS400 Basic</class>
+    <exec>JAVA_PLUGIN:UptimeMonitorAS400</exec>
+	<erdc_version>3.0</erdc_version>
+    <category>Operating System Monitors</category>
+    <category_related>Network Device Monitors</category_related>
+    <grid_info>
+        <supported_versions>7.3</supported_versions>
+        <supported_platforms>windows, linux</supported_platforms>
+        <upgrade_in_place>true</upgrade_in_place>
+        <requires_agent_scripts>false</requires_agent_scripts>
+    </grid_info>
+    <elements>
+        
+        <element name="username" parameter_type="input" data_type="integer" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:10</control_options>
+            <default_value></default_value>
+            <short_description>AS400 User</short_description>
+            <long_description>Username to connect to AS400 server</long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <integer/>
+            </gui_type>
+        </element>
+        
+        <element name="password" parameter_type="input" data_type="string" gui_basic="1"
+                 range_type="0" units="">
+            <control_options>size:10</control_options>
+            <default_value></default_value>
+            <short_description>AS400 Password</short_description>
+            <long_description>Password for user</long_description>
+            <validation_rule>
+                <alphanumeric/>
+            </validation_rule>
+            <error_message>
+                <alphanumeric>required field</alphanumeric>
+            </error_message>
+            <gui_type>
+                <string/>
+            </gui_type>
+        </element>
+              
+        <element name="cpu" parameter_type="output" data_type="integer" gui_basic="1" range_type="0" units="%">
+            <control_options>size:40</control_options>
+            <default_value/>
+            <short_description>CPU Utilization</short_description>
+            <long_description>CPU Utilization</long_description>
+            <validation_rule/>
+            <error_message/>                
+            <gui_type>                
+                <integer/>                
+            </gui_type>   
+        </element>            
+
+        <element name="disk" parameter_type="output" data_type="integer" gui_basic="1" range_type="0" units="%">
+            <control_options>size:40</control_options>
+            <default_value/>
+            <short_description>Disk Free</short_description>
+            <long_description>Disk Free</long_description>
+            <validation_rule/>
+            <error_message/>                
+            <gui_type>                
+                <integer/>                
+            </gui_type>   
+        </element>                    
+        
+        <element name="jobs" parameter_type="output" data_type="integer" gui_basic="1" range_type="0" units="#">
+            <control_options>size:40</control_options>
+            <default_value/>
+            <short_description>Jobs</short_description>
+            <long_description>Number of Jobs</long_description>
+            <validation_rule/>
+            <error_message/>                
+            <gui_type>                
+                <integer/>                
+            </gui_type>   
+        </element>                    
+        
+        <element name="curstg" parameter_type="output" data_type="integer" gui_basic="1" range_type="0" units="MB">
+            <control_options>size:40</control_options>
+            <default_value/>
+            <short_description>CURSTG</short_description>
+            <long_description>Memory</long_description>
+            <validation_rule/>
+            <error_message/>                
+            <gui_type>                
+                <integer/>                
+            </gui_type>   
+        </element>                    
+        
+        <element name="timer" parameter_type="output" data_type="integer" gui_basic="0" range_type="0" units="ms">
+            <control_options>size:8</control_options> 
+            <default_value /> 
+            <short_description>Response time</short_description> 
+            <long_description>Response time in ms</long_description> 
+            <validation_rule /> 
+            <error_message /> 
+            <gui_type>
+                <integer /> 
+            </gui_type>
+        </element>        
+        
+    </elements>
+    <help>Monitor CPU/Memory performance on an IBM (iSeries) AS/400 server.</help>
+</uptime>
