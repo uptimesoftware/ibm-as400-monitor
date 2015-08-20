@@ -5,7 +5,7 @@
 	"category":"Monitor CPU/Memory performance on an IBM (iSeries) AS/400 server.",
 	"version":"3.0",
 	"supported_versions":[
-		"7.3"
+		"7.3,7.4,7.5"
 	],
 	"supported_platforms":[
 		"windows",
