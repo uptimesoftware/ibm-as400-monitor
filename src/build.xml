@@ -26,25 +26,25 @@
   </target>
 
   <target name="dist" depends="compile"> 
-  	<zip destfile="dist/tmp/MonitorAS400.zip">
-  	  <zipfileset dir="classes" prefix="classes"/>
+    <zip destfile="dist/tmp/MonitorAS400.zip">
+      <zipfileset dir="classes" prefix="classes"/>
       <zipfileset dir="lib" prefix="lib" excludes="compile/**"/>
       <zipfileset dir="src/META-INF" prefix="classes/META-INF"/>  
-  	</zip>
-  	<!--<zip destfile="dist/MonitorAS400/MonitorAS400.zip">-->
-  	<zip destfile="../dist/ibm-as400-monitor.zip">
-      <zipfileset dir="definition" />
-  	  <zipfileset file="dist/tmp/MonitorAS400.zip" prefix="files/plugins/java" />
     </zip>
-	<copy todir="../pkg">
-		<fileset dir="definition"/>
-	</copy>
-	<!--
-    <copy todir="dist/MonitorAS400">
-      <fileset dir="grid_files" />
+    <!--<zip destfile="dist/MonitorAS400/MonitorAS400.zip">-->
+    <zip destfile="../dist/ibm-as400-monitor.zip">
+      <zipfileset dir="definition" />
+      <zipfileset file="dist/tmp/MonitorAS400.zip" prefix="files/plugins/java" />
+    </zip>
+    <copy todir="../pkg">
+      <fileset dir="definition"/>
     </copy>
-	-->
-  	<delete dir="dist/tmp" />
+
+    <!--copy todir="dist/MonitorAS400">
+      <fileset dir="grid_files" />
+    </copy-->
+    
+    <delete dir="dist/tmp" />
   </target>
 
   <target name="clean">
