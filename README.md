@@ -5,7 +5,7 @@
 
 ### Description: Monitor CPU/Memory performance on an IBM (iSeries) AS/400 server.
 
-### Supported Monitoring Stations: 7.5, 7.4, 7.3
+### Supported Monitoring Stations: 7.6, 7.5, 7.4, 7.3
 ### Supported Agents: None; no agent required
 
 ### Dependencies: <p>n/a</p>
