@@ -46,7 +46,7 @@
                 <alphanumeric>required field</alphanumeric>
             </error_message>
             <gui_type>
-                <string/>
+                <password/>
             </gui_type>
         </element>
               
