@@ -9,7 +9,7 @@
     <category>Operating System Monitors</category>
     <category_related>Network Device Monitors</category_related>
     <grid_info>
-        <supported_versions>7.3,7.4,7.5,7.6</supported_versions>
+        <supported_versions>7.3,7.4,7.5,7.6,7.7</supported_versions>
         <supported_platforms>windows, linux</supported_platforms>
         <upgrade_in_place>true</upgrade_in_place>
         <requires_agent_scripts>false</requires_agent_scripts>
