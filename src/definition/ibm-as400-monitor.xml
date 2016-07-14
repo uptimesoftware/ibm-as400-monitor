@@ -5,7 +5,7 @@
         xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
     <class>AS400 Basic</class>
     <exec>JAVA_PLUGIN:UptimeMonitorAS400</exec>
-	<erdc_version>3.1</erdc_version>
+	<erdc_version>3.0</erdc_version>
     <category>Operating System Monitors</category>
     <category_related>Network Device Monitors</category_related>
     <grid_info>
